@@ -337,6 +337,24 @@ NSString * const AQGridViewSelectionDidChangeNotification = @"AQGridViewSelectio
 {
 	_gridData.rightPadding = inset;
 }
+- (CGFloat) topContentInset
+{
+	return ( _gridData.topPadding );
+}
+
+- (void) setTopContentInset: (CGFloat) inset
+{
+	_gridData.topPadding = inset;
+}
+- (CGFloat) bottomContentInset
+{
+	return ( _gridData.bottomPadding );
+}
+
+- (void) setBottomContentInset: (CGFloat) inset
+{
+	_gridData.bottomPadding = inset;
+}
 
 - (CGSize) gridCellSize
 {
@@ -522,7 +540,7 @@ NSString * const AQGridViewSelectionDidChangeNotification = @"AQGridViewSelectio
 	        newSize.height = minimumHeight;
 	}
 
-	newSize.height = fmax(newSize.height, self.frame.size.height+1);
+	//newSize.height = fmax(newSize.height, self.frame.size.height+1);
 
 	CGSize oldSize = self.contentSize;
 	[super setContentSize: newSize];
