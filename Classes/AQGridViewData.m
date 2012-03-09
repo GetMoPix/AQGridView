@@ -170,7 +170,7 @@
 
 - (NSUInteger) numberOfItemsPerRow
 {
-	if ( _layoutDirection == AQGridViewLayoutDirectionHorizontal )
+	if ( _layoutDirection == AQGridViewLayoutDirectionVertical )
 		return ( (NSUInteger)floorf(_boundsSize.width / _actualCellSize.width) );
 	
 	// work out how many rows we can fit
